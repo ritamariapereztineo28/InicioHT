@@ -4,8 +4,7 @@ import { Container,
   Header,Right, Button,
   Content,Footer,Fab,Item,
   FooterTab,Card, Text ,
-  Input,Title, Form} from 'native-base';
-import {ImageEditor} from 'react-native-web';
+  Input,Title, Form,Icon, Left} from 'native-base';
 
 export default class Login extends Component {
   render() {
@@ -15,9 +14,15 @@ export default class Login extends Component {
           <Content>
             <Image style={styles.image_style} source={{uri:'https://www.lupusasturias.org/data/fotos/noticias/g_20_historia_clinica_.png'}} />
               <Form style={styles.information}>
+              <Item>
+              <Icon name='people' />
                   <Input style ={styles.InputDesingExtra} placeholder="User-Name"/>
+              </Item>
+              <Item>
+              <Icon name="key"/>
                   <Input style ={styles.InputDesingExtra} placeholder="Password"/>
-                  <Button light style={styles.adaptationOfButton} onPress={()=>{alert('Bienvenido/a !')}}><Text>Inicio</Text></Button>
+              </Item>                  
+                  <Button light style={styles.adaptationOfButton} onPress={()=>{alert('Bienvenido/a !')}}><Text style={styles.textBtn}>Log in</Text></Button>
               </Form>
           </Content>
         <Footer/>
@@ -29,13 +34,13 @@ export default class Login extends Component {
 
 const styles = StyleSheet.create({
   Body:{
-    backgroundColor:'#DCB2A9'
+    backgroundColor:'#DCB2A9' 
   },
   image_style:{
     marginLeft:'23%',
     marginTop:15,
     height: 200,
-    width: 200,
+    width: "60%",
     flex: 1,
     borderRadius:500
   },
@@ -43,7 +48,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#FCFCF8',
     marginTop:'5%',
-    margin:20,
+    margin:'5%',
     width:'90%',
     alignItems: 'center',
     borderRadius:10,
@@ -54,14 +59,6 @@ const styles = StyleSheet.create({
     borderColor: 'transparent',
     borderWidth: 1 ,padding:5,width:'100%'
   },
-  text:{
-    color:'#000',
-    padding:1,
-    fontWeight:'bold',
-    textAlign: 'center',
-    fontFamily: 'Cochin',
-    
-  },
   paddingAdictional:{
     paddingTop:30
   },
@@ -70,7 +67,14 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     margin:20,
     
-  }
+  },
+   textBtn:{
+    color:'#000',
+    padding:1,
+    fontWeight:'bold',
+    textAlign: 'center',
+    
+  },
   
   
 });
