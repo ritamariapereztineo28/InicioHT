@@ -3,14 +3,14 @@ import { StyleSheet,Image } from 'react-native';
 import { Container,
   Header,Right, Button,
   Content,Footer,Fab,Item,
-  FooterTab,Card, Text ,
+  FooterTab,Card, Text ,DatePicker,
   Input,Title, Form,Icon, Left} from 'native-base';
 
 export default class Login extends Component {
   render() {
     return (
      <Container style={styles.Body}>
-        <Header style={styles.paddingAdictional}><Title >MedTegritas</Title></Header>
+        <Header style={styles.paddingAdictional}><Title style={styles.textBtn}>MedTegritas</Title></Header>
           <Content>
             <Image style={styles.image_style} source={{uri:'https://www.lupusasturias.org/data/fotos/noticias/g_20_historia_clinica_.png'}} />
               <Form style={styles.information}>
@@ -37,7 +37,7 @@ export default class Login extends Component {
               </Item>
               <Item>
               <Icon name='people' />
-                  <Input style ={styles.InputDesingExtra} placeholder="Fecha"/>
+                   <DatePicker style ={styles.desingExtraDate}/>
               </Item>
               <Item>
               <Icon name="key"/>
@@ -81,11 +81,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius:'10%',
     justifyContent: 'center',
-    padding:'2%',
+    padding:'5%',
     paddingTop:100,
     paddingBottom:'1%',
   },
   InputDesingExtra:{
+    borderColor: 'transparent',
+    borderWidth: 1 ,padding:5,width:'100%'
+  },
+   desingExtraDate:{
     borderColor: 'transparent',
     borderWidth: 1 ,padding:5,width:'100%'
   },
@@ -100,7 +104,8 @@ const styles = StyleSheet.create({
   },
    textBtn:{
     color:'#000',
-    padding:1,
+    padding:5,
+    paddingTop:10,
     fontWeight:'bold',
     textAlign: 'center',
     // fontFamily: 'Cochin',
