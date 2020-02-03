@@ -24,9 +24,36 @@ export default class Login extends Component {
               </Item>                  
                   <Button light style={styles.adaptationOfButton} onPress={()=>{alert('Bienvenido/a !')}}><Text style={styles.textBtn}>Log in</Text></Button>
               </Form>
+                  
+
+             <Form style={styles.information}>
+             <Item>
+              <Icon name='people' />
+                  <Input style ={styles.InputDesingExtra} placeholder="Name"/>
+              </Item>
+              <Item>
+              <Icon name='people' />
+                  <Input style ={styles.InputDesingExtra} placeholder="User-name"/>
+              </Item>
+              <Item>
+              <Icon name='people' />
+                  <Input style ={styles.InputDesingExtra} placeholder="Fecha"/>
+              </Item>
+              <Item>
+              <Icon name="key"/>
+                  <Input style ={styles.InputDesingExtra} placeholder="Password"/>
+              </Item>    
+               <Item>
+              <Icon name="key"/>
+                  <Input style ={styles.InputDesingExtra} placeholder=""/>
+              </Item>                  
+              <Button light style={styles.adaptationOfButton} onPress={()=>{alert('Bienvenido/a !')}}><Text style={styles.textBtn}>Register</Text></Button>
+             </Form>
           </Content>
         <Footer/>
       </Container>
+      // Register
+      
       
     );
   }
@@ -34,7 +61,7 @@ export default class Login extends Component {
 
 const styles = StyleSheet.create({
   Body:{
-    backgroundColor:'#DCB2A9' 
+    backgroundColor:'#DCB2A9'
   },
   image_style:{
     marginLeft:'23%',
@@ -50,17 +77,20 @@ const styles = StyleSheet.create({
     marginTop:'5%',
     margin:'5%',
     width:'90%',
+    height:400,
     alignItems: 'center',
-    borderRadius:10,
+    borderRadius:'10%',
     justifyContent: 'center',
-    padding:'10%'
+    padding:'2%',
+    paddingTop:100,
+    paddingBottom:'1%',
   },
   InputDesingExtra:{
     borderColor: 'transparent',
     borderWidth: 1 ,padding:5,width:'100%'
   },
   paddingAdictional:{
-    paddingTop:30
+    paddingTop:10
   },
   adaptationOfButton:{
     width:'80%',
@@ -73,6 +103,7 @@ const styles = StyleSheet.create({
     padding:1,
     fontWeight:'bold',
     textAlign: 'center',
+    // fontFamily: 'Cochin',
     
   },
   
